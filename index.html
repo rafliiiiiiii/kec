@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rekap Keuangan — Kecamatan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <div class="letterhead">
+    <div class="letterhead-row">
+      <div class="seal">KC</div>
+      <div>
+        <h1>Kecamatan Sukamaju</h1>
+        <p>Rekap Keuangan Kas & Retribusi</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <p class="eyebrow">Ringkasan</p>
+    <h2 class="title">Rekap keuangan bulan berjalan</h2>
+    <p class="desc">Pantau pemasukan (retribusi layanan) dan pengeluaran (operasional/kegiatan) secara ringkas dan otomatis.</p>
+
+    <div class="summary">
+      <div class="card masuk">
+        <p class="label">Pemasukan</p>
+        <p class="value" id="total-masuk">Rp0</p>
+      </div>
+      <div class="card keluar">
+        <p class="label">Pengeluaran</p>
+        <p class="value" id="total-keluar">Rp0</p>
+      </div>
+      <div class="card saldo">
+        <p class="label">Saldo</p>
+        <p class="value" id="total-saldo">Rp0</p>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <h3>Catat transaksi baru</h3>
+      <div class="jenis-toggle">
+        <button type="button" data-jenis="masuk" class="active">↓ Pemasukan</button>
+        <button type="button" data-jenis="keluar">↑ Pengeluaran</button>
+      </div>
+
+      <div class="row2">
+        <div>
+          <label for="tgl">Tanggal</label>
+          <input type="date" id="tgl">
+        </div>
+        <div>
+          <label for="jumlah">Jumlah (Rp)</label>
+          <input type="number" id="jumlah" placeholder="0" min="0">
+        </div>
+      </div>
+
+      <label for="kategori">Kategori</label>
+      <select id="kategori"></select>
+
+      <label for="ket">Keterangan</label>
+      <input type="text" id="ket" placeholder="Contoh: Retribusi surat domisili minggu ke-3">
+
+      <button class="btn-primary" id="btn-tambah">Simpan transaksi</button>
+    </div>
+
+    <div class="chart-box">
+      <h3>Rekap per kategori</h3>
+      <div id="chart-body"></div>
+    </div>
+
+    <div class="table-box">
+      <h3>Riwayat transaksi</h3>
+      <table>
+        <thead>
+          <tr><th>Tanggal</th><th>Kategori</th><th>Keterangan</th><th style="text-align:right">Jumlah</th></tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>Prototipe rekap keuangan — data pada demo ini bersifat sementara (belum terhubung sistem asli)</footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
