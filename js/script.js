@@ -1,5 +1,5 @@
   // GANTI URL INI dengan Web app URL dari Apps Script kamu sendiri
-  const API_URL = "https://script.google.com/macros/s/GANTI_DENGAN_URL_KAMU/exec";
+  const API_URL = "https://script.google.com/macros/s/AKfycbxW3pkhWUXThFyhgFO88T-BsH7wVe6Do-F4W_-ZoQCghuXtIiqbMk3uV18CvfmIl91BOg/exec";
 
   const KATEGORI = {
     masuk: ["Retribusi Surat", "Retribusi Pasar", "Sumbangan/Hibah", "Lain-lain Pemasukan"],
