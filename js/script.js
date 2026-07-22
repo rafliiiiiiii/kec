@@ -61,10 +61,10 @@
   });
 
   document.getElementById("btn-tambah").addEventListener("click", () => {
-    const tgl = document.getElementById("tgl").value;
-    const jumlah = parseInt(document.getElementById("jumlah").value, 10);
-    const kategori = document.getElementById("kategori").value;
-    const ket = document.getElementById("ket").value.trim();
+    const tgl = document.getElementById("Tanggal").value;
+    const jumlah = parseInt(document.getElementById("Jumlah").value, 10);
+    const kategori = document.getElementById("Kategori").value;
+    const ket = document.getElementById("Keterangan").value.trim();
 
     if(!tgl || !jumlah || jumlah <= 0 || !ket){
       alert("Lengkapi tanggal, jumlah, dan keterangan terlebih dahulu.");
@@ -72,8 +72,8 @@
     }
 
     simpanTransaksi({ tgl, jenis: jenisAktif, kategori, ket, jumlah });
-    document.getElementById("jumlah").value = "";
-    document.getElementById("ket").value = "";
+    document.getElementById("Jumlah").value = "";
+    document.getElementById("Keterangan").value = "";
   });
 
   function render(){
